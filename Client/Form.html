@@ -72,13 +72,13 @@
     }
     .overlay.visible { display: flex; }
     .overlay .card {
-      background: floralwhite;
+      background: #ffffff; /* restored: white card background */
       padding: 36px 42px;
       border-radius: 12px;
       text-align: center;
       max-width: 720px;
       width: 95%;
-      box-shadow: 0 10px 30px rgba(129, 61, 61, 0.25);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
     }
     .overlay .icon {
       width: 140px;
@@ -90,7 +90,7 @@
   </style>
 </head>
 <body>
-  <form action="http://localhost:5000/register" method="POST" enctype="multipart/form-data">
+  <form action="https://hackathon-project-theta-amber.vercel.app/register" method="POST" enctype="multipart/form-data">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
 
@@ -145,7 +145,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   const formData = new FormData(e.target);
 
   try {
-    const resp = await fetch('http://localhost:5000/register', {
+  const resp = await fetch('https://hackathon-project-theta-amber.vercel.app/register', {
       method: 'POST',
       body: formData,
     });

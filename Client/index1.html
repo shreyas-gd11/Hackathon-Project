@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Background</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: url("Images/Back.png.png") no-repeat center top;
+      background-size: cover; /* makes image cover the screen */
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    .btn {
+      background-color: blue;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: darkblue;
+      background-color: rgb(32, 207, 207);
+    }
+
+
+
+    .Google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: rgb(5, 33, 193);
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.Google-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.Google-btn:hover {
+  /* single hover rule to avoid conflicts */
+  background-color: rgb(16, 176, 188);
+}
+
+/* utility to center content horizontally */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Welcome</h1>
+  <p>Write your info here over the image.</p>
+
+
+  <a href="Form.html" >
+  <button class="btn" id="js-register">Register</button>
+  </a>
+<p class="js-register"></p>  <!-- add this placeholder for the message -->
+
+  <p style="margin-top:12px;"><strong>Live site:</strong> <a href="https://hackathon-project-theta-amber.vercel.app/" target="_blank">https://hackathon-project-theta-amber.vercel.app/</a></p>
+
+<script>
+  const btn = document.getElementById("js-register");
+  const message = document.querySelector(".js-register");
+
+  btn.addEventListener("click", () => {
+    message.innerHTML = "Images/Back.png.png";
+  });
+</script>
+<body>
+</html>
